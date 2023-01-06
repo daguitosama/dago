@@ -1,7 +1,15 @@
 <template>
-    <div class="font-sans">
+    <div>
+        <!-- layout is not used, just to remove annoying mismatch warnings -->
         <NuxtLayout>
-            <NuxtPage />
+            <TheNav />
+            <main>
+                <NuxtPage />
+            </main>
         </NuxtLayout>
     </div>
 </template>
+
+<script setup>
+const route = useRoute();
+</script>
