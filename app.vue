@@ -7,6 +7,7 @@
                 <NuxtPage />
             </main>
         </NuxtLayout>
+        <TempPicRenderCtl />
     </div>
 </template>
 
