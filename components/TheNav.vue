@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
     <div
-        class="w-full flex items-center justify-center pt-[90px] h-[130px] fixed bottom-0 -translate-y-[50px]"
+        class="w-full flex items-center justify-center pt-[90px] h-[130px] fixed bottom-0 -translate-y-[50px] z-30"
     >
         <!-- container anchor point -->
         <div class="px-[30px] relative flex items-center justify-center">
