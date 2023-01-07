@@ -2,18 +2,22 @@
 // on home special case handling
 const route = useRoute();
 const currentlyInHome = computed(() => route.name == "index");
+
 const { renderNavPicture, on } = useNavPictureRenderSignal();
 
 // show the pic when mounted
 onMounted(() => {
+    // do not show the pic if is in Home
+    // let that decision to the TheIntroPic comp
+    if (currentlyInHome.value) {
+        return;
+    }
     on();
 });
 
 // on Home prevent the pic render
 //  leave  signalling to the TheHomeIntroPic
-const shouldRenderPic = computed(
-    () => !currentlyInHome.value && renderNavPicture.value
-);
+const shouldRenderPic = computed(() => renderNavPicture.value);
 </script>
 
 <template>
@@ -30,8 +34,8 @@ const shouldRenderPic = computed(
             use just in the intended outlet in TheNav 
         -->
         <div
-            v-if="shouldRenderPic"
-            class="nav_shadow border-2 border-black rounded-full h-[96px] w-[96px] flex justify-center items-center absolute z-20 bottom-0 -translate-y-[17px] pb-[13px] bg-white"
+            v-if="renderNavPicture"
+            class="absolute z-20 bottom-0 -translate-y-[17px] pb-[13px] nav_shadow border-2 border-black rounded-full h-[96px] w-[96px] flex justify-center items-center bg-white"
         >
             <div class="h-[61.52px] w-[56.8px] relative">
                 <img
