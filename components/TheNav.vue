@@ -17,14 +17,7 @@ const links = [
         label: "Contact",
     },
 ];
-
-// on home special case handling
 const route = useRoute();
-const currentlyInHome = computed(() => route.name == "index");
-const renderPic = ref(true);
-const { renderNavPicture, on, off } = useNavPictureRenderSignal();
-// currentlyInHome should be handled here too
-const shouldRenderPic = computed(() => renderNavPicture.value);
 </script>
 
 <template>
@@ -51,30 +44,8 @@ const shouldRenderPic = computed(() => renderNavPicture.value);
                     </li>
                 </ul>
             </div>
-
-            <!-- pic container -->
-
-            <Transition
-                enterFromClass="opacity-0 scale-0 "
-                enterActiveClass="transition-all duration-[1s] origin-bottom"
-                enterToClass="opacity-100 scale-100 "
-                leaveFromClass="opacity-100 scale-100 "
-                leaveActiveClass="transition-all duration-[1s] origin-bottom"
-                leaveToClass="opacity-0 scale-0 "
-            >
-                <div
-                    v-if="shouldRenderPic"
-                    class="nav_shadow border-2 border-black rounded-full h-[96px] w-[96px] flex justify-center items-center absolute z-20 bottom-0 -translate-y-[17px] pb-[13px] bg-white"
-                >
-                    <div class="h-[61.52px] w-[56.8px] relative">
-                        <img
-                            src="/img/Dago.png"
-                            alt="Dago smiling"
-                            class="absolute inset-0 w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </Transition>
+            <!-- the nav pic -->
+            <TheNavPic />
             <!-- nav bar -->
             <div
                 class="border-2 border-black relative z-30 h-[34px] min-w-[300px] rounded-full bg-white"
@@ -88,8 +59,3 @@ const shouldRenderPic = computed(() => renderNavPicture.value);
         </div>
     </div>
 </template>
-<style scoped>
-.nav_shadow {
-    box-shadow: 0px 4px 32px 14px rgba(0, 0, 0, 0.15);
-}
-</style>

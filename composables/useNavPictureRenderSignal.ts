@@ -1,5 +1,5 @@
 export const useNavPictureRenderSignal = () => {
-    const renderNavPicture = useState("renderNavPicture", () => true);
+    const renderNavPicture = useState("renderNavPicture", () => false);
     function on() {
         renderNavPicture.value = true;
     }

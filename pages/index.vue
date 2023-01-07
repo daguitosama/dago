@@ -1,5 +1,8 @@
 <script setup></script>
 
 <template>
-    <h1>home</h1>
+    <div class="grid justify-center">
+        <TheHomeIntro />
+        <div class="h-[3000px]"></div>
+    </div>
 </template>
