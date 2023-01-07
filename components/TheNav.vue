@@ -28,11 +28,12 @@ onMounted(() => {
 </script>
 
 <template>
+    <!-- pt-[90px] h-[130px] -->
     <div
-        class="w-full flex items-center justify-center pt-[90px] h-[130px] fixed bottom-0 -translate-y-[50px] z-30"
+        class="w-full flex items-center justify-center fixed bottom-0 -translate-y-[50px] z-30 bg-orange-300 h-0"
     >
         <!-- container anchor point -->
-        <div class="px-[30px] relative flex items-center justify-center">
+        <div class="relative flex items-center justify-center">
             <!-- nav bar skeleton just for shadows at the bottom layer -->
             <div
                 ref="nav_bar_skeleton"
