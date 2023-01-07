@@ -18,6 +18,13 @@ const links = [
     },
 ];
 const route = useRoute();
+
+// adjust nav_bar_skeleton width to match actual nav_bar
+const nav_bar = ref();
+const nav_bar_skeleton = ref();
+onMounted(() => {
+    nav_bar_skeleton.value.width = nav_bar.value.getBoundingClientRect().width;
+});
 </script>
 
 <template>
@@ -26,28 +33,16 @@ const route = useRoute();
     >
         <!-- container anchor point -->
         <div class="px-[30px] relative flex items-center justify-center">
-            <!-- links copy only to apply shadow at the down layer -->
+            <!-- nav bar skeleton just for shadows at the bottom layer -->
             <div
-                class="nav_shadow absolute z-10 border-2 border-black h-[34px] min-w-[300px] rounded-full bg-white"
-            >
-                <ul
-                    class="flex items-center justify-center gap-2 h-full"
-                    aria-hidden="false"
-                    tabindex="-1"
-                >
-                    <li v-for="link in links" :key="link.route" class="">
-                        <NavLink
-                            :link="link"
-                            :currentPath="route.path"
-                            tabindex="-1"
-                        />
-                    </li>
-                </ul>
-            </div>
+                ref="nav_bar_skeleton"
+                class="nav_shadow absolute z-10 h-[34px] min-w-[300px] rounded-full"
+            ></div>
             <!-- the nav pic -->
             <TheNavPic />
             <!-- nav bar -->
-            <div
+            <nav
+                ref="nav_bar"
                 class="border-2 border-black relative z-30 h-[34px] min-w-[300px] rounded-full bg-white"
             >
                 <ul class="flex items-center justify-center gap-2 h-full">
@@ -55,7 +50,7 @@ const route = useRoute();
                         <NavLink :link="link" :currentPath="route.path" />
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
 </template>
