@@ -39,7 +39,7 @@ onMounted(() => {
             >
                 <img
                     v-if="shouldRenderPic"
-                    src="/img/Dago.png"
+                    src="/img/Dago.jpg"
                     alt="Dago smiling"
                     class="absolute inset-0 w-full h-full object-cover"
                 />

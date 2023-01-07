@@ -39,9 +39,9 @@ const shouldRenderPic = computed(() => renderNavPicture.value);
         >
             <div class="h-[61.52px] w-[56.8px] relative">
                 <img
-                    src="/img/Dago.png"
+                    src="/img/Dago.jpg"
                     alt="Dago smiling"
-                    class="absolute inset-0 w-full h-full object-cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-full overflow-hidden"
                 />
             </div>
         </div>
