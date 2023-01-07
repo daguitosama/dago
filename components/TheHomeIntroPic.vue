@@ -1,6 +1,6 @@
 <script setup>
 import { useElementVisibility } from "@vueuse/core";
-
+const shouldRenderPic = ref(false);
 // hide
 const pic_container = ref();
 const picIsVisible = useElementVisibility(pic_container);
@@ -18,17 +18,32 @@ watch(picIsVisible, (newVisibilityValue, oldVisibilityValue) => {
 // that state as natural
 onBeforeUnmount(() => {
     on();
+    shouldRenderPic.value = false;
+});
+
+onMounted(() => {
+    shouldRenderPic.value = true;
 });
 </script>
 
 <template>
     <div class="flex items-center justify-center" ref="pic_container">
         <div class="w-[204.57px] h-[221.59px] relative">
-            <img
-                src="/img/Dago.png"
-                alt="Dago smiling"
-                class="absolute inset-0 w-full h-full object-cover"
-            />
+            <Transition
+                enterFromClass="opacity-0 scale-0 "
+                enterActiveClass="transition-all duration-[1s] origin-bottom"
+                enterToClass="opacity-100 scale-100 "
+                leaveFromClass="opacity-100 scale-100 "
+                leaveActiveClass="transition-all duration-[1s] origin-bottom"
+                leaveToClass="opacity-0 scale-0 "
+            >
+                <img
+                    v-if="shouldRenderPic"
+                    src="/img/Dago.png"
+                    alt="Dago smiling"
+                    class="absolute inset-0 w-full h-full object-cover"
+                />
+            </Transition>
         </div>
     </div>
 </template>
