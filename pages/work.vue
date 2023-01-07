@@ -1,11 +1,5 @@
-<script setup>
-const props = defineProps({
-    prop1: {},
-});
-</script>
+<script setup></script>
 
 <template>
-    <div>
-        <h1>work</h1>
-    </div>
+    <SectionWork />
 </template>

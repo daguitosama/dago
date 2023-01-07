@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <section class="max-w-lg pt-[120px] flex flex-col items-center">
+    <section class="mx-auto pt-[120px] flex flex-col items-center px-[30px]">
         <!-- pic -->
         <TheHomeIntroPic />
         <!-- heading -->

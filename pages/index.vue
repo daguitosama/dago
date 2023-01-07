@@ -1,8 +1,9 @@
 <script setup></script>
 
 <template>
-    <div class="grid justify-center">
+    <div class="flex flex-col justify-center pb-[200px]">
         <TheHomeIntro />
-        <div class="h-[3000px]"></div>
+        <SectionWork class="mt-[150px]" />
+        <SectionContact />
     </div>
 </template>
