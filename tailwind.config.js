@@ -7,6 +7,9 @@ module.exports = {
             fontFamily: {
                 sans: ["Satoshi Variable", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                greeny: "#21C93C",
+            },
         },
     },
     plugins: [],
