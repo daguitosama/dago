@@ -1,6 +1,4 @@
-<script setup>
-// TODO
-</script>
+<script setup></script>
 
 <template>
     <div></div>

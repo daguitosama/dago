@@ -5,9 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <section
-        class="mx-auto max-w-xl px-[30px] flex flex-col justify-center w-full"
-    >
+    <section class="mx-auto flex flex-col justify-center w-full">
         <div class="w-full">
             <MainHeading text="Contact" />
             <div class="mt-[45px] w-full font-medium">

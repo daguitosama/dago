@@ -1,9 +1,7 @@
 <script setup></script>
 
 <template>
-    <section
-        class="mx-auto max-w-screen-lg w-full px-[30px] pt-[120px] flex flex-col justify-center"
-    >
+    <section class="pt-[120px] flex flex-col justify-center">
         <div class="w-full">
             <MainHeading text="Work" class="mx-auto max-w-xl w-full" />
 
