@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="mx-auto flex flex-col justify-center w-full">
+    <section class="max-w-sm w-full">
         <div class="w-full">
             <MainHeading text="Contact" :useH2="useH2" />
             <div class="mt-[45px] w-full font-medium">

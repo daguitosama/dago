@@ -3,9 +3,9 @@
 <template>
     <section class="flex flex-col justify-center">
         <div class="w-full">
-            <MainHeading text="Work" class="mx-auto max-w-xl w-full" />
+            <MainHeading text="Work" class="" />
 
-            <div class="mt-[45px] font-medium text-xl mx-auto max-w-xl w-full">
+            <div class="mt-[45px] font-medium text-xl max-w-xl w-full">
                 <p>
                     I have been building websites since 2020. Some times my
                     clients have a design, some times they don’t even have a
