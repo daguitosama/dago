@@ -14,9 +14,13 @@ const props = defineProps({
 </script>
 
 <template>
-    <article class="w-[340px] grid gap-[30px]">
+    <article
+        class="max-[370px]:w-[300px] min-[371px]:w-[340px] min grid gap-[30px]"
+    >
         <!-- card pic -->
-        <div class="relative w-full h-[340px] rounded-xl overflow-hidden">
+        <div
+            class="relative w-full max-[370px]:h-[300px] min-[371px]:h-[340px] rounded-xl overflow-hidden"
+        >
             <img
                 :src="workCard.img"
                 :alt="workCard.img_alt"
