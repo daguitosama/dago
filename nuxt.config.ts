@@ -1,15 +1,24 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     css: ["~/assets/css/main.css", "~/assets/css/fonts.css"],
+    runtimeConfig: {
+        public: {
+            BASE_URL: process.env.BASE_URL,
+        },
+    },
+
+    app: {
+        pageTransition: { name: "page", mode: "out-in" },
+    },
     modules: [
         "@nuxtjs/i18n",
         // "@nuxtjs/color-mode",
         "@nuxtjs/tailwindcss",
         "@nuxt/content",
     ],
-    app: {
-        pageTransition: { name: "page", mode: "out-in" },
-    },
+    // content:{
+    //     locales:[]
+    // },
     i18n: {
         locales: [
             {
@@ -39,10 +48,4 @@ export default defineNuxtConfig({
     // colorMode: {
     //     classSuffix: "",
     // },
-
-    runtimeConfig: {
-        public: {
-            BASE_URL: process.env.BASE_URL,
-        },
-    },
 });
