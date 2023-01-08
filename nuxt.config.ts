@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css", "~/assets/css/fonts.css"],
     modules: [
         "@nuxtjs/i18n",
-        "@nuxtjs/color-mode",
+        // "@nuxtjs/color-mode",
         "@nuxtjs/tailwindcss",
         "@nuxt/content",
     ],
@@ -36,9 +36,9 @@ export default defineNuxtConfig({
         baseUrl: process.env.BASE_URL,
     },
 
-    colorMode: {
-        classSuffix: "",
-    },
+    // colorMode: {
+    //     classSuffix: "",
+    // },
 
     runtimeConfig: {
         public: {
