@@ -9,6 +9,13 @@ module.exports = {
             },
             colors: {
                 greeny: "#21C93C",
+                type: {
+                    on: {
+                        light: {
+                            dimmed: "#717171",
+                        },
+                    },
+                },
             },
         },
     },

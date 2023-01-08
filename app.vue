@@ -2,7 +2,8 @@
     <div>
         <!-- layout is not used, just to remove annoying mismatch warnings -->
         <NuxtLayout>
-            <TheNav />
+            <!-- todo: uncomment the nav -->
+            <!-- <TheNav /> -->
             <main>
                 <NuxtPage />
             </main>
