@@ -3,8 +3,8 @@ const props = defineProps({
     workCard: {
         type: Object,
         default: () => ({
-            title: "",
-            slug: "",
+            card_title: "",
+            _path: "",
             img: "",
             img_alt: "",
             descriptionItems: ["foo"],
@@ -31,11 +31,13 @@ const props = defineProps({
             <div class="flex items-baseline justify-between">
                 <div>
                     <h3 class="font-medium text-2xl leading-none">
-                        {{ workCard.title }}
+                        {{ workCard.card_title }}
                     </h3>
                 </div>
                 <div>
-                    <NuxtLink :to="workCard.slug"
+                    <NuxtLink
+                        :to="workCard._path"
+                        class="border-b-2 border-greeny"
                         ><span class="font-medium leading-none"
                             >Learn More</span
                         ></NuxtLink

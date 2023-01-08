@@ -1,7 +1,7 @@
 <script setup>
 const workCardData = {
     title: "pozos en el desierto",
-    slug: "/work/aa-meals",
+    path: "/work/aa-meals",
     img: "/img/work/work-card-pic-pozos.jpg",
     img_alt: "",
     descriptionItems: ["Development", "Self-hosted Media Cloud and Analytics"],
@@ -9,7 +9,7 @@ const workCardData = {
 
 const aaMealsCard = {
     title: "aa meals",
-    slug: "/work/aa-meals",
+    path: "/work/aa-meals",
     img: "/img/work/work-card-pic-aameals.jpg",
     img_alt: "",
     descriptionItems: [
@@ -17,12 +17,22 @@ const aaMealsCard = {
         "Rest Api with Sign Up processing",
     ],
 };
+
+const { data: workCards } = await useAsyncData("work-cards", () =>
+    queryContent("/work").find()
+);
+// console.log({ workCards });
 </script>
 
 <template>
-    <div
-        class="flex flex-col justify-center py-[200px] mx-auto max-w-screen-lg w-full px-[30px]"
-    >
-        <WorkCard :workCard="workCardData" />
+    <div class="pb-[200px]">
+        <div class="px-[30px] pt-2">
+            <h1>Mesh</h1>
+        </div>
+        <div
+            class="mt-[50px] mx-auto max-w-screen-xl w-full px-[30px] flex flex-col items-center"
+        >
+            <WorkCardList :workCards="workCards" />
+        </div>
     </div>
 </template>
