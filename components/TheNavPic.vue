@@ -35,7 +35,7 @@ const shouldRenderPic = computed(() => renderNavPicture.value);
         -->
         <div
             v-if="renderNavPicture"
-            class="absolute z-20 bottom-0 -translate-y-[17px] pb-[13px] nav_shadow border-2 border-black rounded-full h-[96px] w-[96px] flex justify-center items-center bg-white"
+            class="absolute z-20 bottom-0 -translate-y-[17px] pb-[13px] nav_shadow border-2 border-black rounded-full h-[96px] w-[96px] flex justify-center items-center bg-white transition-all duration-300"
         >
             <div class="h-[61.52px] w-[56.8px] relative">
                 <img
