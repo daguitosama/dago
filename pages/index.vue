@@ -66,10 +66,11 @@
 
 <template>
     <div
-        class="flex flex-col justify-center pb-[200px] mx-auto max-w-screen-lg w-full px-[30px]"
+        class="flex flex-col justify-center pb-[200px] mx-auto max-w-screen-xl w-full px-[30px] gap-[150px]"
     >
         <TheHomeIntro />
-        <SectionWork class="mt-[150px]" />
-        <SectionContact />
+        <!-- <SectionWork class="mt-[150px]" /> -->
+        <SectionProjects />
+        <SectionContact :useH2="true" />
     </div>
 </template>

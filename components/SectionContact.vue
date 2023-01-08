@@ -1,13 +1,16 @@
 <script setup>
 const props = defineProps({
-    prop1: {},
+    useH2: {
+        type: Boolean,
+        default: false,
+    },
 });
 </script>
 
 <template>
     <section class="mx-auto flex flex-col justify-center w-full">
         <div class="w-full">
-            <MainHeading text="Contact" />
+            <MainHeading text="Contact" :useH2="useH2" />
             <div class="mt-[45px] w-full font-medium">
                 <ul class="grid gap-3">
                     <!-- email -->

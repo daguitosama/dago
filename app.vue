@@ -3,7 +3,7 @@
         <!-- layout is not used, just to remove annoying mismatch warnings -->
         <NuxtLayout>
             <!-- todo: uncomment the nav -->
-            <!-- <TheNav /> -->
+            <TheNav />
             <main>
                 <NuxtPage />
             </main>
