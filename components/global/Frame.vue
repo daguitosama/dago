@@ -25,7 +25,7 @@ function onFrameError() {
 <template>
     <div class="w-full">
         <div class="mt-[50px]">
-            <p class="">
+            <div class="flex items-center gap-2">
                 <button
                     :disabled="
                         frameState == 'loading' || frameState == 'loaded'
@@ -42,7 +42,7 @@ function onFrameError() {
                     >
                 </button>
                 <span class="text-xl font-bold"> Live Preview</span>
-            </p>
+            </div>
             <p class="text-type-on-light-dimmed font-medium text-sm max-w-md">
                 For security reasons, some interactive elements might be
                 disabled, but you can see pretty much anything.
