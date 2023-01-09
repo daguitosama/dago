@@ -5,8 +5,9 @@
 
 <template>
     <main
-        class="pt-[50px] pb-[200px] mx-auto max-w-screen-lg w-full px-[30px] flex flex-col items-center"
+        class="pt-[50px] pb-[200px] mx-auto max-w-screen-lg w-full flex flex-col items-center overflow-hidden"
     >
+        <!-- px-[30px] -->
         <ContentDoc />
     </main>
 </template>

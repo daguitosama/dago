@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["/content/**/*.md"],
@@ -8,6 +9,7 @@ module.exports = {
                 sans: ["Satoshi Variable", ...defaultTheme.fontFamily.sans],
             },
             colors: {
+                ...colors,
                 greeny: "#21C93C",
                 type: {
                     on: {
