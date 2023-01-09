@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-    <section class="flex flex-col justify-center">
-        <div class="w-full">
+    <section class="flex justify-center items-center">
+        <div class="">
             <MainHeading text="Work" class="" />
 
             <div class="mt-[45px] font-medium text-xl max-w-xl w-full">

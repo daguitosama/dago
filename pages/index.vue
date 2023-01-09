@@ -70,6 +70,8 @@
     >
         <TheHomeIntro />
         <SectionProjects />
-        <SectionContact :useH2="true" class="max-w-md" />
+        <div class="flex justify-center">
+            <SectionContact :useH2="true" class="max-w-md" />
+        </div>
     </div>
 </template>
