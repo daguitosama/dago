@@ -11,7 +11,7 @@ descriptionItems: [
 ]
 ---
 
-::MainHeading{text="Pozos en el desierto" id="pozos-en-el-desierto"}
+::MainHeading{text="Arisites Inn" id="aristides"}
 ::
 
 Coming Soon

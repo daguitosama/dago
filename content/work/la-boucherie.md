@@ -12,7 +12,7 @@ descriptionItems: [
 ]
 ---
 
-::MainHeading{text="AA Meals" id="aa-meals"}
+::MainHeading{text="La Boucherie" id="la-boucherie"}
 ::
 
 Coming Soon
