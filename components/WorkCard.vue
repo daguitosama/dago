@@ -15,7 +15,7 @@ const props = defineProps({
 
 <template>
     <article
-        class="max-[370px]:w-[300px] min-[371px]:w-[340px] min grid gap-[30px]"
+        class="max-[370px]:w-[300px] min-[371px]:w-[340px] min grid gap-[15px]"
     >
         <!-- card pic -->
         <div
