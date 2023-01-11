@@ -31,7 +31,7 @@ function onFrameError() {
                         frameState == 'loading' || frameState == 'loaded'
                     "
                     @click="triggerLoad"
-                    class="bg-black px-[8px] py-[2px] rounded-full text-white font-medium leading-none text-sm"
+                    class="px-[8px] py-[2px] rounded-full bg-black dark:bg-white text-white dark:text-black font-medium leading-none text-sm"
                     :class="{ 'animate-pulse': frameState == 'loading' }"
                 >
                     <span v-if="frameState == 'idle'">Load</span>
@@ -43,7 +43,9 @@ function onFrameError() {
                 </button>
                 <span class="text-xl font-bold"> Live Preview</span>
             </div>
-            <p class="text-type-on-light-dimmed font-medium text-sm max-w-md">
+            <p
+                class="text-type-on-light-dimmed dark:text-type-on-dark-dimmed font-medium text-sm max-w-md"
+            >
                 For security reasons, some interactive elements might be
                 disabled, but you can see pretty much anything.
             </p>
@@ -51,7 +53,7 @@ function onFrameError() {
         <div class="overflow-visible">
             <div
                 :class="class"
-                class="h-[700px] w-full sm:w-[380px] border-black border-4 shadow_ease rounded-xl overflow-hidden relative"
+                class="h-[700px] w-full sm:w-[380px] border-black dark:border-white bg-white border-4 shadow_ease rounded-xl overflow-hidden relative"
             >
                 <iframe
                     v-if="frameState == 'loading' || frameState == 'loaded'"
@@ -59,15 +61,16 @@ function onFrameError() {
                     @error="onFrameError"
                     :src="url"
                     frameborder="1"
-                    class="w-full h-full border-black shadow_ease rounded-xl"
+                    class="w-full h-full border-black dark:border-white bg-white shadow_ease rounded-xl"
                 ></iframe>
 
+                <!-- loader -->
                 <div
                     v-if="frameState == 'loading'"
                     class="absolute inset-0 flex items-center justify-center w-full h-full"
                 >
                     <div
-                        class="w-[50px] h-[50px] rounded-full bg-black animate-ping"
+                        class="w-[50px] h-[50px] rounded-full bg-black dark:bg-white animate-pulse"
                     ></div>
                 </div>
             </div>

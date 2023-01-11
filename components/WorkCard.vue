@@ -55,9 +55,10 @@ const props = defineProps({
                         v-for="(item, idx) in workCard.descriptionItems"
                         :key="idx"
                     >
-                        <span class="font-medium text-type-on-light-dimmed">{{
-                            item
-                        }}</span>
+                        <span
+                            class="font-medium text-type-on-light-dimmed dark:text-type-on-dark-dimmed"
+                            >{{ item }}</span
+                        >
                     </li>
                 </ul>
             </div>

@@ -16,6 +16,9 @@ module.exports = {
                         light: {
                             dimmed: "#717171",
                         },
+                        dark: {
+                            dimmed: "#c4c9cb",
+                        },
                     },
                 },
             },

@@ -53,7 +53,7 @@ function handleHeadClick() {
             <!-- nav bar -->
             <nav
                 ref="nav_bar"
-                class="border-2 border-black relative z-30 h-[34px] min-w-[300px] rounded-full bg-white transition-all duration-300"
+                class="border-2 border-black dark:border-white relative z-30 h-[34px] min-w-[300px] rounded-full bg-white dark:bg-black transition-all duration-300"
                 :class="{ 'opacity-0': !navNormal }"
             >
                 <ul class="flex items-center justify-center gap-2 h-full">

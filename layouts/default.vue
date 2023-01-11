@@ -34,7 +34,9 @@ const head = useLocaleHead({
                     />
                 </template>
             </Head>
-            <Body>
+            <Body
+                class="antialiased text-black dark:text-white bg-white dark:bg-black transition-all duration-300"
+            >
                 <slot />
             </Body>
         </Html>
