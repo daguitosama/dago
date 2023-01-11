@@ -21,12 +21,14 @@ const props = defineProps({
         <div
             class="relative w-full max-[370px]:h-[300px] min-[371px]:h-[340px] rounded-xl overflow-hidden"
         >
-            <img
-                :src="workCard.img"
-                :alt="workCard.img_alt"
-                loading="lazy"
-                class="w-full h-full absolute inset-0 object-cover"
-            />
+            <NuxtLink :to="workCard._path">
+                <img
+                    :src="workCard.img"
+                    :alt="workCard.img_alt"
+                    loading="lazy"
+                    class="w-full h-full absolute inset-0 object-cover hover:scale-125 transition-all duration-300"
+                />
+            </NuxtLink>
         </div>
 
         <!-- card info -->
@@ -35,7 +37,9 @@ const props = defineProps({
             <div class="flex items-baseline justify-between">
                 <div>
                     <h3 class="font-medium text-2xl leading-none">
-                        {{ workCard.card_title }}
+                        <NuxtLink :to="workCard._path">
+                            {{ workCard.card_title }}
+                        </NuxtLink>
                     </h3>
                 </div>
                 <div>
