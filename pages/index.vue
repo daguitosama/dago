@@ -1,5 +1,6 @@
 <script setup>
-    const { public: BASE_URL } = useRuntimeConfig();
+    const { BASE_URL } = useRuntimeConfig().public;
+    // console.log(BASE_URL);
     useHead({
         title: "Dago AC",
         meta: [
