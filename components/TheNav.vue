@@ -1,41 +1,42 @@
 <script setup>
-const links = [
-    {
-        path: "/",
-        label: "Home",
-    },
-    {
-        path: "/work",
-        label: "Work",
-    },
-    {
-        path: "/about",
-        label: "About",
-    },
-    {
-        path: "/contact",
-        label: "Contact",
-    },
-];
-const route = useRoute();
+    const links = [
+        {
+            path: "/",
+            label: "Home",
+        },
+        {
+            path: "/work",
+            label: "Work",
+        },
+        {
+            path: "/about",
+            label: "About",
+        },
+        {
+            path: "/contact",
+            label: "Contact",
+        },
+    ];
+    const route = useRoute();
 
-// adjust nav_bar_skeleton width to match actual nav_bar
-const nav_bar = ref();
-const nav_bar_skeleton = ref();
-onMounted(() => {
-    nav_bar_skeleton.value.width = nav_bar.value.getBoundingClientRect().width;
-});
+    // adjust nav_bar_skeleton width to match actual nav_bar
+    const nav_bar = ref();
+    const nav_bar_skeleton = ref();
+    onMounted(() => {
+        nav_bar_skeleton.value.width =
+            nav_bar.value.getBoundingClientRect().width;
+    });
 
-const navNormal = ref(true);
-function handleHeadClick() {
-    navNormal.value = !navNormal.value;
-}
+    const navNormal = ref(true);
+    function handleHeadClick() {
+        navNormal.value = !navNormal.value;
+    }
 </script>
 
 <template>
     <!-- pt-[90px] h-[130px] -->
     <div
-        class="w-full flex items-center justify-center fixed bottom-8 -translate-y-[50px] z-30 h-0"
+        class="w-full flex items-center justify-center fixed bottom-2 md:bottom-8 -translate-y-[50px] z-30 h-0"
     >
         <!-- container anchor point -->
         <div class="relative flex items-center justify-center">
@@ -57,8 +58,15 @@ function handleHeadClick() {
                 :class="{ 'opacity-0': !navNormal }"
             >
                 <ul class="flex items-center justify-center gap-2 h-full">
-                    <li v-for="link in links" :key="link.route" class="">
-                        <NavLink :link="link" :currentPath="route.path" />
+                    <li
+                        v-for="link in links"
+                        :key="link.route"
+                        class=""
+                    >
+                        <NavLink
+                            :link="link"
+                            :currentPath="route.path"
+                        />
                     </li>
                 </ul>
             </nav>
