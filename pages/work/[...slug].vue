@@ -27,5 +27,8 @@
         .frame {
             @apply px-[30px] max-w-xl mx-auto;
         }
+        .m-70 {
+            margin-top: 70px;
+        }
     }
 </style>

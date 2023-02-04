@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <section class="grid gap-[10px] w-[140%] -translate-x-[30px] px-[30px]">
+    <section class="grid w-[140%] -translate-x-[30px] px-[30px]">
         <div>
             <LittleHeading
                 text="Gallery"
