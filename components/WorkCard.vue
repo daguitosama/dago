@@ -26,7 +26,7 @@ const props = defineProps({
                     :src="workCard.img"
                     :alt="workCard.img_alt"
                     loading="lazy"
-                    class="w-full h-full absolute inset-0 object-cover hover:scale-125 transition-all duration-300"
+                    class="w-full h-full absolute inset-0 object-cover hover:scale-125 transition-all duration-300 rounded-xl"
                 />
             </NuxtLink>
         </div>

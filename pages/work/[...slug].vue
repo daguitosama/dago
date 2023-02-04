@@ -1,13 +1,31 @@
-<script setup>
-// const route = useRoute();
-// console.log(route.params.slug[0]);
-</script>
+<script setup></script>
 
 <template>
     <main
-        class="px-[30px] pt-[50px] pb-[200px] mx-auto max-w-screen-lg w-full flex flex-col items-center overflow-hidden"
+        class="work-content pt-[100px] pb-[200px] mx-auto max-w-screen-lg w-full flex flex-col items-center overflow-hidden"
     >
-        <!-- px-[30px] -->
-        <ContentDoc />
+        <ContentDoc class="frame" />
     </main>
 </template>
+
+<style lang="postcss">
+    main.work-content {
+        /* paragraphs */
+        p {
+            @apply mt-[30px] font-medium text-xl max-w-xl mx-auto;
+        }
+
+        /* anchors */
+        a {
+            border-bottom: 2px solid #21c93c;
+        }
+
+        ul:not(.gallery-list) {
+            @apply max-w-xl mx-auto mt-[30px] pl-[30px] font-medium text-lg list-disc grid gap-[10px];
+        }
+
+        .frame {
+            @apply px-[30px] max-w-xl mx-auto;
+        }
+    }
+</style>

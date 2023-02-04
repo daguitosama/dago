@@ -1,25 +1,25 @@
 <script setup>
-const props = defineProps({
-    url: {
-        type: String,
-        default: "/",
-    },
-    class: {
-        type: String,
-        default: "",
-    },
-});
+    const props = defineProps({
+        url: {
+            type: String,
+            default: "/",
+        },
+        class: {
+            type: String,
+            default: "",
+        },
+    });
 
-const frameState = ref("idle");
-function triggerLoad() {
-    frameState.value = "loading";
-}
-function onFrameLoad() {
-    frameState.value = "loaded";
-}
-function onFrameError() {
-    frameState.value = "error";
-}
+    const frameState = ref("idle");
+    function triggerLoad() {
+        frameState.value = "loading";
+    }
+    function onFrameLoad() {
+        frameState.value = "loaded";
+    }
+    function onFrameError() {
+        frameState.value = "error";
+    }
 </script>
 
 <template>
@@ -43,12 +43,14 @@ function onFrameError() {
                 </button>
                 <span class="text-xl font-bold"> Live Preview</span>
             </div>
-            <p
-                class="text-type-on-light-dimmed dark:text-type-on-dark-dimmed font-medium text-sm max-w-md"
+            <div
+                class="mt-[10px] text-type-on-light-dimmed dark:text-type-on-dark-dimmed font-medium text-sm max-w-md"
             >
-                For security reasons, some interactive elements might be
-                disabled, but you can see pretty much anything.
-            </p>
+                <span
+                    >For security reasons, some interactive elements might be
+                    disabled, but you can see pretty much anything.</span
+                >
+            </div>
         </div>
         <div class="overflow-visible">
             <div
@@ -67,7 +69,7 @@ function onFrameError() {
                 <!-- loader -->
                 <div
                     v-if="frameState == 'loading'"
-                    class="absolute inset-0 flex items-center justify-center w-full h-full"
+                    class="absolute inset-0 flex items-center justify-center w-full h-full bg-white dark:bg-black"
                 >
                     <div
                         class="w-[50px] h-[50px] rounded-full bg-black dark:bg-white animate-pulse"
