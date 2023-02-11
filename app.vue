@@ -1,7 +1,6 @@
 <template>
     <div class="antialiased">
         <NuxtLayout>
-            <TheNav />
             <main>
                 <NuxtPage />
             </main>

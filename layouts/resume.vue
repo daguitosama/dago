@@ -20,7 +20,6 @@
             :dir="head.htmlAttrs.dir"
         >
             <Head>
-                <!-- <Title>{{ title }}</Title> -->
                 <template
                     v-for="link in head.link"
                     :key="link.id"
@@ -46,7 +45,6 @@
             <Body
                 class="antialiased text-black dark:text-white bg-white dark:bg-black transition-all duration-300"
             >
-                <TheNav />
                 <main>
                     <slot />
                 </main>
