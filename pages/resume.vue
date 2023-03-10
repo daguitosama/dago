@@ -283,6 +283,7 @@
                     src="/img/work_captures_optimized/pozos-1.jpg"
                     alt="pozoseneldesierto intro section"
                     class="img-shadow rounded-[14px] md:max-h-[200px] md:w-auto"
+                    loading="eager"
                 />
             </div>
             <div>
@@ -290,6 +291,7 @@
                     src="/img/work_captures_optimized/pozos-2.jpg"
                     alt="pozoseneldesierto menu"
                     class="img-shadow rounded-[14px] md:max-h-[200px] md:w-auto"
+                    loading="eager"
                 />
             </div>
             <div>
@@ -297,14 +299,28 @@
                     src="/img/work_captures_optimized/pozos-3.jpg"
                     alt="pozoseneldesierto chapter section"
                     class="img-shadow rounded-[14px] md:max-h-[200px] md:w-auto"
+                    loading="eager"
                 />
             </div>
+            <p class="mt-[40px] text-xl font-medium">
+                Thanks for reading, tenga buen día.
+            </p>
         </section>
     </div>
 </template>
 
-<style scoped>
+<style lang="postcss">
     .img-shadow {
         box-shadow: 0px 4px 32px 14px rgba(0, 0, 0, 0.15);
+    }
+    @media print {
+        .img-shadow {
+            box-shadow: none;
+            border: 1px solid black;
+        }
+    }
+    html {
+        /* -webkit-print-color-adjust: exact; */
+        /* -webkit-filter: opacity(1); */
     }
 </style>
