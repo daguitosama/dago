@@ -84,10 +84,7 @@
         />
         <div class="mt-[45px] w-full font-medium max-w-xs">
             <div class="text-center text-xl">
-                <p>
-                    I live in Havana Cuba, im currently studying informatics at
-                    the university.
-                </p>
+                <p>I'm currently studying informatics at the university.</p>
                 <p>
                     I like dogs, coffee, bushcraft YouTube videos, outdoor
                     activities, and meting people from different cultures.
